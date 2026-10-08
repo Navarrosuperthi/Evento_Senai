@@ -16,7 +16,7 @@ require_once __DIR__ . "/init.php"
         <?php
         foreach($_SESSION ['eventos'] as $chave => $valor){
             print "<li>
-                    <a class='navegacao' href = 'index.php?id={$chave} '>
+                    <a class='navegacao' href = 'detalhes.php?id={$chave} '>
                         {$valor['titulo']}
                     </a>
                     </li>";
