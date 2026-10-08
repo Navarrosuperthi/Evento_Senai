@@ -15,7 +15,7 @@ require_once __DIR__ . "/init.php";
 <body>
     <header class="cabecalho">
         <div class="logo-slogan">
-            <h1>EventosSENAI</h1>
+            <h1>EventosSENAI</h1>                                           
             <p>Seus eventos estão aqui</p>
         </div>
         <div class="navegacao">
