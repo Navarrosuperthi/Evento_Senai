@@ -8,15 +8,15 @@ require_once __DIR__ . "/init.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deleção - NotiSENAI</title>
+    <title>Deleção - EventoSENAI</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header class="cabecalho">
         <div class="logo-slogan">
-            <h1>NotiSENAI</h1>
-            <p>Suaa noticias estão aqui</p>
+            <h1>EventoSENAI</h1>
+            <p>Seus eventos estão aqui</p>
         </div>
         <div class="navegacao">
             <?php require_once __DIR__ . "/nav.php" ?>
@@ -26,9 +26,9 @@ require_once __DIR__ . "/init.php";
 
     <ul>
         <?php
-        foreach ($_SESSION['noticias'] as $chave => $valor) {
+        foreach ($_SESSION['eventos'] as $chave => $valor) {
             print "<li>
-            <a href='formDelete.php?id={$chave}'>
+            <a href='formremocao.php?id={$chave}'>
                 {$valor['titulo']}
             </a>    
         </li>";
@@ -38,22 +38,22 @@ require_once __DIR__ . "/init.php";
     <?php if (isset($_GET['id'])): ?>
         <?php
     $id = $_GET['id'];
-    $noticiaAtual = $_SESSION['noticias'][$id];
+    $eventoAtual = $_SESSION['eventos'][$id];
     ?>
-    <h2>Deseja mesmo excluir está noticia?</h2>
+    <h2>Deseja mesmo excluir este evento?</h2>
     <p>
-        <strong><?= $noticiaAtual['titulo'] ?></strong>
+        <strong><?= $eventoAtual['titulo'] ?></strong>
     </p>
 
-    <form action="processarDeletar.php" method="POST">
+    <form action="remocao.php" method="POST">
 
         <input type="hidden" name="id" value="<?= $id ?>">
 
-        <button type="submit">Excluir notícia</button>
+        <button type="submit">Excluir evento</button>
 
         </form>
     <?php else: ?>
-        <p>Nenhuma noticia selecionada.</p>
+        <p>Nenhum evento selecionado.</p>
         <p>Por favor, selecione uma das opções.</p>
     <?php endif; ?>
 </body>

@@ -2,9 +2,9 @@
 require_once '/init.php';
 if($_SERVER['REQUEST_METHOD'] == "POST"){
    
-    $idNoticia = $_POST['id'];
+    $idEvento = $_POST['id'];
 
-    unset ($_SESSION['noticias'][$idNoticia]);
+    unset ($_SESSION['eventos'][$idevento]);
     header("Location: index.php");
     exit;
 }
