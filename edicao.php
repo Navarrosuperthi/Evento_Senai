@@ -28,9 +28,10 @@ if (isset($_GET['id'])){
                         {$valor['titulo']}
                     </a>
                     </li>";
-        }
+        }   
         ?>
         </ul>
+        
         <?php if($eventoDetectado): ?>
 
         <form action="processaEdicao.php" method="POST">
