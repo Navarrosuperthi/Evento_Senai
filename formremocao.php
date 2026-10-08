@@ -8,14 +8,14 @@ require_once __DIR__ . "/init.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deleção - EventoSENAI</title>
+    <title>Deleção - EventosSENAI</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header class="cabecalho">
         <div class="logo-slogan">
-            <h1>EventoSENAI</h1>
+            <h1>EventosSENAI</h1>
             <p>Seus eventos estão aqui</p>
         </div>
         <div class="navegacao">
